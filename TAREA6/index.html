@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Gestión Empresarial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Proyecto SGE</div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" data-target="inicio">Inicio</a></li>
+            <li><a href="#" data-target="sge">Sobre SGE</a></li>
+            <li><a href="#" data-target="instalacion">Instalación Odoo</a></li>
+            <li><a href="#" data-target="admin">Administración</a></li>
+            <li><a href="#" data-target="seguridad">Seguridad</a></li>
+            <li><a href="#" data-target="informes">Informes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="inicio" class="active">
+            <h1>Sistemas de Gestión Empresarial</h1>
+            <p>Bienvenido a la página principal del proyecto. Navega por el menú para descubrir todo sobre los Sistemas
+                de Gestión Empresarial (ERP) y la implementación práctica del sistema Odoo.</p>
+            <img src="odoo.png" alt="">
+        </section>
+
+        <section id="sge">
+            <h2>¿Qué es un SGE? Tipos y características</h2>
+            <p>Un Sistema de Gestión Empresarial (ERP) es un software que integra y centraliza todos los procesos
+                operativos y de negocio de una empresa, facilitando el flujo de información.</p>
+            <h3>Tipos de SGE:</h3>
+            <ul>
+                <li>Propietarios: Requieren el pago de licencias (ej. SAP, Microsoft Dynamics).</li>
+                <li>Open Source / Libres: Código abierto y generalmente gratuitos (ej. Odoo, ERPNext).</li>
+            </ul>
+            <h3>Características principales:</h3>
+            <ul>
+                <li>Modularidad: Se instalan solo los módulos necesarios (Ventas, RRHH, Inventario).</li>
+                <li>Base de datos centralizada: Una única fuente de datos para evitar duplicidades.</li>
+                <li>Automatización: Agiliza tareas repetitivas y mejora la eficiencia.</li>
+            </ul>
+        </section>
+
+        <section id="instalacion">
+            <h2>Instalación de Odoo en local</h2>
+            <p>Para este proyecto hemos elegido Odoo, un SGE gratuito y de código abierto. A continuación, se detalla el
+                proceso de instalación:</p>
+            <ol>
+                <li>Descargar la versión Community desde la página oficial de Odoo para nuestro sistema operativo.</li>
+                <li>Ejecutar el instalador. Durante el proceso, se instalará también el servidor de base de datos
+                    PostgreSQL.</li>
+                <li>Configurar las credenciales de conexión de PostgreSQL.</li>
+                <li>Finalizar la instalación y acceder a localhost:8069 desde el navegador.</li>
+                <li>Crear la base de datos inicial introduciendo el nombre de la empresa, correo y contraseña.</li>
+            </ol>
+            <img src="instalacion.png" alt="Captura de instalación">
+        </section>
+
+        <section id="admin">
+            <h2>Administración y Configuración</h2>
+            <p>La administración del SGE se realiza desde el módulo de "Ajustes". Para empezar a trabajar, es necesario
+                configurar los datos básicos y los módulos:</p>
+            <ul>
+                <li>Configuración de la empresa: Se establecen los datos fiscales, el logotipo y la moneda
+                    predeterminada.</li>
+                <li>Gestión de aplicaciones: Desde el menú de Aplicaciones, instalamos los módulos necesarios como CRM,
+                    Ventas, Facturación y Punto de Venta (TPV).</li>
+                <li>Ajustes generales: Configuración de permisos de correo, plantillas de documentos y formato de
+                    fechas.</li>
+            </ul>
+            <img src="admin.png" alt="Captura de instalación">
+        </section>
+
+        <section id="seguridad">
+            <h2>Acceso Seguro, Roles y Privilegios</h2>
+            <p>El control de acceso es fundamental para proteger la información en un SGE. Odoo maneja la seguridad
+                basándose en grupos de usuarios con diferentes privilegios:</p>
+            <ul>
+                <li>Administrador: Tiene acceso total a la configuración del sistema y a todos los módulos.</li>
+                <li>Usuario Interno: Empleados de la empresa. Su acceso se restringe módulo por módulo (ej. un comercial
+                    solo ve Ventas, no Recursos Humanos).</li>
+                <li>Portal / Público: Acceso para clientes externos que solo pueden ver sus propios presupuestos y
+                    facturas.</li>
+            </ul>
+            <p>Para cambiar un rol, el administrador debe ir a Ajustes > Usuarios y Empresas > Usuarios, seleccionar un
+                usuario y marcar las casillas correspondientes a su nivel de acceso.</p>
+                <img src="Seguridad.png" alt="Captura de instalación">
+        </section>
+
+        <section id="informes">
+            <h2>Elaboración de informes y Exportación</h2>
+            <p>La extracción de datos es clave para la toma de decisiones. Odoo ofrece varias formas de manejar la
+                información:</p>
+            <h3>Elaboración de informes</h3>
+            <ul>
+                <li>Informes dinámicos: Se generan directamente desde las vistas de los módulos (gráficos de barras,
+                    líneas o circulares).</li>
+                <li>Informes PDF: En cualquier registro (como una factura o presupuesto), se puede pulsar el botón
+                    "Imprimir" para generar un documento PDF con formato oficial.</li>
+            </ul>
+            <h3>Exportación de información</h3>
+            <p>Para sacar datos del sistema hacia otras herramientas (como Excel):</p>
+            <ol>
+                <li>Ir a la vista de lista del módulo deseado (ej. Clientes o Productos).</li>
+                <li>Seleccionar los registros marcando las casillas de la izquierda.</li>
+                <li>Hacer clic en el botón "Acción" y seleccionar "Exportar".</li>
+                <li>Elegir los campos específicos que se desean descargar y el formato (XLSX o CSV).</li>
+            </ol>
+            <img src="Informes.png" alt="Captura de instalación">
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
